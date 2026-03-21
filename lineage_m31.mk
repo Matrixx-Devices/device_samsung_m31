@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# NFC
+TARGET_HAS_NFC := false
+
 # Inherit device configuration
 $(call inherit-product, device/samsung/m31/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)

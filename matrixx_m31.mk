@@ -20,8 +20,8 @@ TARGET_HAS_NFC := false
 # Inherit device configuration
 $(call inherit-product, device/samsung/m31/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+## Inherit some common matrixx stuff
+$(call inherit-product, vendor/matrixx/config/common_full_phone.mk)
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
@@ -35,10 +35,19 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 	BuildFingerprint="samsung/m31nsxx/m31:12/SP1A.210812.016/M315FXXU3CWA2:user/release-keys"
 
 ## Device configuration
-PRODUCT_NAME := lineage_m31
+PRODUCT_NAME := matrixx_m31
 PRODUCT_DEVICE := m31
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-M315F
 PRODUCT_MANUFACTURER := samsung
 
 TARGET_BOOT_ANIMATION_RES := 1080
+
+#Matrixx Stuff
+MATRIXX_MAINTAINER := PARBINDAR7
+TARGET_SUPPORTED_REFRESH_RATES := 60
+TARGET_CUSTOM_UDFPS := true
+WITH_GMS := false
+WITH_BCR := true
+BYPASS_CHARGE_SUPPORTED := false
+PRODUCT_NO_CAMERA := false
